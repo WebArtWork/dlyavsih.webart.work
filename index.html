@@ -94,6 +94,16 @@
       .mobile-sticky{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;bottom:0;left:0;right:0;background:#fff;padding:9px;gap:6px;z-index:40;border-top:1px solid var(--line)}
       .mobile-sticky a{text-align:center;padding:11px 5px;font-weight:600;font-size:.76rem}.mobile-sticky a:nth-child(1){background:var(--wood);color:#fff}.mobile-sticky a:nth-child(2){background:var(--steel);color:#fff}.mobile-sticky a:nth-child(3){background:var(--grey);color:var(--graphite)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}.hero-media video{transform:none!important}.room img,.car-card img,.gs-card img,.gallery figure img{transition:none}.final{background-attachment:scroll}}
+    .request{background:var(--grey)}
+    .request-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}.request-phone{display:inline-block;margin-top:22px;font:800 clamp(1.4rem,2.6vw,1.9rem) var(--serif);color:var(--terracotta)}
+    .request-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 14px;padding:32px;background:#fff;border:1px solid var(--line);border-radius:12px}
+    .field{display:grid;gap:6px;align-content:start;min-width:0;font:700 .8rem var(--serif)}.field.full{grid-column:1/-1}.field small{font:400 .78rem var(--sans);color:var(--muted)}
+    .field input,.field select,.field textarea{width:100%;min-width:0;min-height:50px;padding:11px 14px;border:1px solid var(--line);border-radius:9px;background:var(--grey);color:var(--graphite);font:400 1rem var(--sans)}
+    .field textarea{min-height:110px;resize:vertical}.field textarea:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px}.field [aria-invalid=true]{border-color:var(--terracotta);border-width:2px}
+    [data-error-for]{font:700 .8rem var(--sans);color:#a4552a}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    .request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;color:var(--muted);font-size:.8rem}
+    [data-status]{grid-column:1/-1;margin:0;padding:14px 16px;border-left:4px solid var(--steel);border-radius:9px;background:var(--grey);font-size:.92rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-left-color:var(--terracotta)}[data-status] a{font-weight:800;text-decoration:underline}
+    @media(max-width:1040px){.request-grid{grid-template-columns:minmax(0,1fr);gap:32px}}@media(max-width:600px){.request-form{grid-template-columns:minmax(0,1fr);padding:22px 16px}}
   </style>
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Для всіх","image":"https://dlyavsih.webart.work/images/hero-stay.jpg","address":{"@type":"PostalAddress","streetAddress":"провулок Північний, 3","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"telephone":"+380985127714","url":"https://dlyavsih.webart.work/"},{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Автомийка Для всіх","image":"https://dlyavsih.webart.work/images/hero-wash.jpg","address":{"@type":"PostalAddress","streetAddress":"провулок Північний, 3","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"telephone":"+380985127714","url":"https://dlyavsih.webart.work/"}]</script>
 </head>
@@ -103,22 +113,24 @@
   <main id="top">
     <section class="hero"><div class="hero-top wrap"><span class="eyebrow">Кам’янець-Подільський</span><h1>Для всіх</h1><p class="lead" style="margin:auto">Для вашої поїздки. Для вашого авто. Проживання, автомийка, кухня, сауна та додаткові послуги у Кам’янці-Подільському.</p><div class="hero-address">провулок Північний, 3<a href="https://maps.app.goo.gl/k3CUVfZ58tJh6RNe6" target="_blank" rel="noopener">Показати на карті →</a></div></div><div class="hero-side stay"><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero-stay.jpg"><source src="hero-bg.mp4" type="video/mp4"></video></div><div class="hero-side-content"><span class="eyebrow">Мені потрібне проживання</span><h2>Номер</h2><p>Двомісний стандарт, Напівлюкс та Люкс.</p><a class="btn" style="background:#fff;color:var(--wood);border-color:#fff" href="#rooms">Переглянути номери</a></div></div><div class="hero-side wash"><img src="images/hero-wash.jpg" alt="Автомийка, ілюстративне зображення"><div class="hero-side-content"><span class="eyebrow">Мені потрібна автомийка</span><h2>Авто</h2><p>Легкові та вантажні автомобілі.</p><a class="btn" style="background:#fff;color:var(--steel);border-color:#fff" href="#booking">Записатися</a></div></div></section>
     <section class="facts"><div class="wrap facts-grid"><div class="fact"><b>3 категорії номерів</b><span>Стандарт · Напівлюкс · Люкс</span></div><div class="fact"><b>Автомийка</b><span>Легкові + вантажні</span></div><div class="fact"><b>Парковка</b><span>За даними джерела</span></div><div class="fact"><b>Інтернет</b><span>За даними джерела</span></div><div class="fact"><b>Сауна</b><span>За даними джерела</span></div><div class="fact"><b>Кухня</b><span>Українська · домашня · європейська</span></div></div></section>
-    <section class="section selector" id="selector"><div class="wrap"><span class="eyebrow">Оберіть послугу</span><h2>Що вас цікавить?</h2><div class="selector-grid reveal-group"><article class="select-card reveal-item"><span>Проживання</span><h3>Проживання</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Номери Стандарт / Напівлюкс / Люкс.</p><a href="#rooms">Переглянути номери →</a></article><article class="select-card reveal-item"><span>Автомийка</span><h3>Автомийка</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Легкові та вантажні автомобілі.</p><a href="#booking">Записатися →</a></article><article class="select-card reveal-item"><span>Відпочинок</span><h3>Сауна</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Відпочинок після дороги.</p><a href="#relax">Уточнити →</a></article><article class="select-card reveal-item"><span>Їжа</span><h3>Їжа</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Українська, домашня, європейська кухня.</p><a href="#food">Дізнатися більше →</a></article></div></div></section>
-    <section class="section rooms" id="rooms"><div class="wrap"><div class="rooms-head reveal"><div><span class="eyebrow">Проживання</span><h2>Потрібна зупинка у Кам’янці?</h2></div><p>Три категорії номерів. Кількість номерів у кожній категорії, місткість і ціни наразі не підтверджені.</p></div><div class="room-grid reveal-group"><figure class="room reveal-item"><img src="images/room-standard.jpg" alt="Двомісний стандарт, ілюстративне зображення"><figcaption class="room-tag"><strong>Двомісний стандарт</strong><small>Деталі уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-semilux.jpg" alt="Напівлюкс, ілюстративне зображення"><figcaption class="room-tag"><strong>Напівлюкс</strong><small>Деталі уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-lux.jpg" alt="Люкс, ілюстративне зображення"><figcaption class="room-tag"><strong>Люкс</strong><small>Оснащення номера уточнюйте телефоном</small></figcaption></figure></div></div></section>
+    <section class="section selector" id="selector"><div class="wrap"><span class="eyebrow">Оберіть послугу</span><h2>Що вас цікавить?</h2><div class="selector-grid reveal-group"><article class="select-card reveal-item"><span>Проживання</span><h3>Проживання</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Номери Стандарт / Напівлюкс / Люкс.</p><a href="#rooms">Переглянути номери →</a></article><article class="select-card reveal-item"><span>Автомийка</span><h3>Автомийка</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Легкові та вантажні автомобілі.</p><a href="#booking">Записатися →</a></article><article class="select-card reveal-item"><span>Відпочинок</span><h3>Сауна</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Відпочинок після дороги.</p><a href="#sauna-request">Забронювати →</a></article><article class="select-card reveal-item"><span>Їжа</span><h3>Їжа</h3><p style="font-size:.85rem;color:var(--muted);margin:0 0 12px">Українська, домашня, європейська кухня.</p><a href="#food">Дізнатися більше →</a></article></div></div></section>
+    <section class="section rooms" id="rooms"><div class="wrap"><div class="rooms-head reveal"><div><span class="eyebrow">Проживання</span><h2>Потрібна зупинка у Кам’янці?</h2></div><p>Три категорії номерів. Кількість номерів у кожній категорії, місткість і ціни наразі не підтверджені.</p></div><div class="room-grid reveal-group"><figure class="room reveal-item"><img src="images/room-standard.jpg" alt="Двомісний стандарт, ілюстративне зображення"><figcaption class="room-tag"><strong>Двомісний стандарт</strong><small>Деталі уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-semilux.jpg" alt="Напівлюкс, ілюстративне зображення"><figcaption class="room-tag"><strong>Напівлюкс</strong><small>Деталі уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-lux.jpg" alt="Люкс, ілюстративне зображення"><figcaption class="room-tag"><strong>Люкс</strong><small>Оснащення номера уточнюйте телефоном</small></figcaption></figure></div><div class="actions"><a class="btn steel" href="#stay-request">Залишити запит на номер</a><a class="btn" href="tel:+380985127714">Зателефонувати</a></div></div></section>
+    <section class="section request" id="stay-request"><div class="wrap request-grid"><div><span class="eyebrow">Запит на проживання</span><h2>Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки та категорію номера. Ми зателефонуємо, щоб підтвердити наявність і вартість.</p><a class="request-phone" href="tel:+380985127714">+38 098 512 77 14</a></div><form class="request-form" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Категорія номера<select name="roomType"><option value="">Ще не вирішили</option><option>Двомісний стандарт</option><option>Напівлюкс</option><option>Люкс</option></select></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn steel" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section amenity-strip"><div class="wrap"><span class="eyebrow">Комфорт</span><h2>Парковка, Інтернет та супутникове ТБ</h2><p class="lead">У джерельному описі підтверджені парковка, доступ до мережі Інтернет та супутникове телебачення. Безкоштовність парковки, швидкість Інтернету та наявність ТБ у кожному номері наразі не уточнені.</p><div class="amenity-row"><span>Парковка</span><span>Доступ до Інтернету</span><span>Супутникове ТБ</span></div><a class="btn steel" style="margin-top:24px" href="https://maps.app.goo.gl/k3CUVfZ58tJh6RNe6" target="_blank" rel="noopener">Прокласти маршрут</a></div></section>
     <section class="section carcare" id="carcare"><div class="wrap"><span class="eyebrow">Автомийка</span><h2>Автомийка «Для всіх»</h2><p class="lead">Догляд для вашого авто, поки ви займаєтесь своїми справами. Підтверджене миття легкових і вантажних автомобілів, без detailing, воскування чи хімчистки салону, доки це не підтверджено.</p><div class="carcare-grid reveal-group"><article class="car-card reveal-item"><img src="images/wash-car.jpg" alt="Миття легкових автомобілів, ілюстративне зображення"><div><h3>Легкові автомобілі</h3><p>Ціни та тривалість миття уточнюйте під час запису.</p></div></article><article class="car-card reveal-item"><img src="images/wash-truck.jpg" alt="Миття вантажних автомобілів, ілюстративне зображення"><div><h3>Вантажні автомобілі</h3><p>Формат для комерційного транспорту, деталі уточнюйте окремо.</p></div></article></div><a class="btn terracotta" style="margin-top:30px" href="#booking">Записатися на мийку</a></div></section>
     <section class="section carpet" id="carpet"><div class="wrap"><span class="eyebrow">Чистка</span><h2>Професійне прання килимів</h2><div class="carpet-box"><b>Окрема послуга комплексу</b><p>Ціна за м², умови приймання/видачі та терміни виконання наразі не підтверджені, уточнюйте безпосередньо телефоном.</p></div><a class="btn terracotta" style="margin-top:20px" href="tel:+380985127714">Уточнити умови</a></div></section>
     <section class="section food" id="food"><div class="wrap food-grid"><div class="reveal"><span class="eyebrow">Їжа</span><h2>Поїжте перед дорогою або після неї</h2><p class="lead">Джерельний опис підтверджує українську, домашню та європейську кухню. Формат (ресторан, кафе чи їдальня), меню, ціни та години роботи наразі не підтверджені. Ми не називаємо це «рестораном» до уточнення.</p><a class="btn steel" href="tel:+380985127714">Дізнатися більше</a></div><div style="border-radius:12px;overflow:hidden;min-height:280px"><img src="images/food.jpg" alt="Кухня, ілюстративне зображення"></div></div></section>
-    <section class="section gazebo-sauna" id="relax"><div class="wrap"><span class="eyebrow">Назовні · відпочинок</span><h2>Альтанка та сауна</h2><p class="lead">Обидва напрями підтверджені у джерельному описі. BBQ-можливості, опалення альтанки та точна місткість сауни наразі не уточнені.</p><div class="gs-grid reveal-group"><article class="gs-card reveal-item"><img src="images/gazebo.jpg" alt="Альтанка, ілюстративне зображення" loading="lazy"><div><b>Альтанка</b><p>Відпочинок на території, умови уточнюйте окремо.</p></div></article><article class="gs-card reveal-item"><img src="images/sauna.jpg" alt="Сауна, ілюстративне зображення" loading="lazy"><div><b>Сауна</b><p>Відпочинок після дороги або насиченого дня, місткість і вартість уточнюйте.</p></div></article></div><a class="btn" style="margin-top:26px;background:#fff;color:var(--wood);border-color:#fff" href="tel:+380985127714">Забронювати сауну</a></div></section>
+    <section class="section gazebo-sauna" id="relax"><div class="wrap"><span class="eyebrow">Назовні · відпочинок</span><h2>Альтанка та сауна</h2><p class="lead">Обидва напрями підтверджені у джерельному описі. BBQ-можливості, опалення альтанки та точна місткість сауни наразі не уточнені.</p><div class="gs-grid reveal-group"><article class="gs-card reveal-item"><img src="images/gazebo.jpg" alt="Альтанка, ілюстративне зображення" loading="lazy"><div><b>Альтанка</b><p>Відпочинок на території, умови уточнюйте окремо.</p></div></article><article class="gs-card reveal-item"><img src="images/sauna.jpg" alt="Сауна, ілюстративне зображення" loading="lazy"><div><b>Сауна</b><p>Відпочинок після дороги або насиченого дня, місткість і вартість уточнюйте.</p></div></article></div><div class="actions" style="margin-top:26px"><a class="btn" style="background:#fff;color:var(--wood);border-color:#fff" href="#sauna-request">Забронювати сауну</a><a class="btn" style="color:#fff;border-color:#fff" href="tel:+380985127714">Зателефонувати</a></div></div></section>
+    <section class="section request" id="sauna-request"><div class="wrap request-grid"><div><span class="eyebrow">Сауна</span><h2>Забронюйте сауну</h2><p class="lead">Оберіть день і зручний час. Ми передзвонимо, щоб підтвердити бронювання, місткість і вартість.</p><a class="request-phone" href="tel:+380985127714">+38 098 512 77 14</a></div><form class="request-form" data-hotelos data-form-name="Бронювання сауни" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Людей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата<input name="date" type="date"></label><label class="field">Час<input name="time" type="time"></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn steel" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section scenario"><div class="wrap"><span class="eyebrow">Кому це підходить</span><h2>Все в одному місці</h2><div class="scenario-grid reveal-group"><article class="scenario-card reveal-item"><b>Подорожній</b><span>Проживання + парковка.</span></article><article class="scenario-card reveal-item"><b>Водій</b><span>Автомийка легкових авто.</span></article><article class="scenario-card reveal-item"><b>Водій вантажівки</b><span>Миття вантажних авто.</span></article><article class="scenario-card reveal-item"><b>Гість / пара</b><span>Три категорії номерів.</span></article><article class="scenario-card reveal-item"><b>Невелика компанія</b><span>Альтанка + сауна, після уточнення місткості.</span></article></div></div></section>
     <section class="section location" id="contacts"><div class="wrap location-grid"><div class="map-card"><iframe class="map-embed" loading="lazy" title="Карта: готель «Для всіх», Кам’янець-Подільський" src="https://www.google.com/maps?q=48.7030836,26.5659969&z=16&output=embed"></iframe><span class="eyebrow map-badge">Локація</span><a class="btn terracotta map-pin-btn" href="https://maps.app.goo.gl/k3CUVfZ58tJh6RNe6" target="_blank" rel="noopener">Відкрити на Картах ↗</a></div><div class="contact-card"><span class="eyebrow">Контакти</span><h2 style="font:800 clamp(1.9rem,4vw,2.7rem)/1.05 var(--serif);margin:.2em 0">Для всіх</h2><a class="big" href="tel:+380985127714">+38 098 512 77 14</a><dl><dt>Адреса</dt><dd>провулок Північний, 3, Кам’янець-Подільський</dd><dt>Email / сайт / Instagram</dt><dd>Не підтверджено</dd><dt>Графік роботи</dt><dd>Уточніть окремо для готелю, автомийки, кухні та сауни</dd></dl></div></div></section>
     <section class="section" id="gallery"><div class="wrap"><span class="eyebrow">Галерея</span><h2>Комплекс «Для всіх»</h2><div class="gallery reveal-group"><figure class="reveal-item"><img src="images/room-standard.jpg" alt="Ілюстративний номер" loading="lazy"></figure><figure class="reveal-item"><img src="images/wash-car.jpg" alt="Ілюстративна автомийка" loading="lazy"></figure><figure class="reveal-item"><img src="images/food.jpg" alt="Ілюстративна кухня" loading="lazy"></figure><figure class="reveal-item"><img src="images/sauna.jpg" alt="Ілюстративна сауна" loading="lazy"></figure></div><p class="gallery-note">Зображення поки ілюстративні. Реальні фото номерів, автомийки, кухні, сауни та альтанки буде додано після зйомки на місці.</p></div></section>
     <section class="section reviews"><div class="wrap"><span class="eyebrow">Відгуки</span><h2>Чесно про відгуки</h2><div class="reviews-box">Підтвердженого рейтингу чи кількості відгуків для «Для всіх» наразі немає. Сторінка не показує вигадану чи застарілу оцінку. Реальні відгуки з’являться тут після перевірки.</div></div></section>
-    <section class="section booking" id="booking"><div class="wrap" style="text-align:center"><span class="eyebrow">Контакти</span><h2>Зв’яжіться з нами</h2><p class="lead" style="margin:auto">Зателефонуйте, щоб уточнити проживання, автомийку чи інші послуги. Заявки на сайті не приймаються, тільки дзвінок.</p><div class="contact-card" style="max-width:420px;margin:34px auto 0;border:1px solid var(--line)"><a class="big" href="tel:+380985127714">+38 098 512 77 14</a><dl><dt>Адреса</dt><dd>провулок Північний, 3, Кам’янець-Подільський</dd></dl><a class="btn terracotta" href="https://maps.app.goo.gl/k3CUVfZ58tJh6RNe6" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a></div></div></section>
-    <section class="final"><div class="reveal"><span class="eyebrow" style="color:#e8b58c">Мийка · Проживання · Їжа · Відпочинок</span><h2>Вам чи вашому авто?</h2><p>У «Для всіх» можна зупинитися, поїсти, відпочити та скористатися автомийкою.</p><div class="actions"><a class="btn steel" href="#booking">Потрібен номер</a><a class="btn terracotta" href="#booking">Потрібна автомийка</a></div><small>+38 098 512 77 14</small></div></section>
+    <section class="section booking" id="booking"><div class="wrap" style="text-align:center"><span class="eyebrow">Контакти</span><h2>Зв’яжіться з нами</h2><p class="lead" style="margin:auto">Зателефонуйте, щоб уточнити проживання, автомийку чи інші послуги. Номер і сауну можна також запитати через форму на сайті, ми передзвонимо.</p><div class="contact-card" style="max-width:420px;margin:34px auto 0;border:1px solid var(--line)"><a class="big" href="tel:+380985127714">+38 098 512 77 14</a><dl><dt>Адреса</dt><dd>провулок Північний, 3, Кам’янець-Подільський</dd></dl><a class="btn terracotta" href="https://maps.app.goo.gl/k3CUVfZ58tJh6RNe6" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a></div></div></section>
+    <section class="final"><div class="reveal"><span class="eyebrow" style="color:#e8b58c">Мийка · Проживання · Їжа · Відпочинок</span><h2>Вам чи вашому авто?</h2><p>У «Для всіх» можна зупинитися, поїсти, відпочити та скористатися автомийкою.</p><div class="actions"><a class="btn steel" href="#stay-request">Потрібен номер</a><a class="btn terracotta" href="#booking">Потрібна автомийка</a></div><small>+38 098 512 77 14</small></div></section>
   </main>
   <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>ДЛЯ ВСІХ</strong><small>Автомийка · Проживання · Кухня · Сауна</small></div><div class="footer-col"><b>Проживання</b><a href="#rooms">Стандарт</a><a href="#rooms">Напівлюкс</a><a href="#rooms">Люкс</a></div><div class="footer-col"><b>Автомийка</b><a href="#carcare">Легкові авто</a><a href="#carcare">Вантажні авто</a><a href="#carpet">Прання килимів</a></div><div class="footer-col"><b>Відпочинок</b><a href="#relax">Сауна</a><a href="#relax">Альтанка</a></div><div class="footer-col"><b>Їжа</b><a href="#food">Українська</a><a href="#food">Домашня</a><a href="#food">Європейська</a></div><div class="footer-col"><b>Інформація</b><a href="#gallery">Галерея</a><a href="#contacts">Карта</a><a href="#contacts">Контакти</a></div></div><div class="footer-bottom"><span>провулок Північний, 3 · Кам’янець-Подільський</span><span>+38 098 512 77 14</span></div></div></footer>
-  <div class="mobile-sticky"><a href="tel:+380985127714">Подзвонити</a><a href="#booking">Номер</a><a href="#booking">Автомийка</a></div>
+  <div class="mobile-sticky"><a href="tel:+380985127714">Подзвонити</a><a href="#stay-request">Номер</a><a href="#booking">Автомийка</a></div>
   <script>
     const nav=document.querySelector('.nav');
     const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal,.reveal-group').forEach(el=>observer.observe(el));
@@ -143,5 +155,152 @@
       navSections.forEach(s=>io.observe(s));
     }
   </script>
+<script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-dlyavsih'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://dlyavsih.webart.work/'; // from the site's CNAME
+const PHONE = '+38 098 512 77 14'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
+</script>
 </body>
 </html>

@@ -23,3 +23,6 @@ Live site: https://dlyavsih.webart.work
 
 ## Notes
 The page explicitly states several details are not yet confirmed: the number of rooms per category, room capacity and pricing, car wash pricing and duration, carpet cleaning pricing and turnaround, whether parking and Wi-Fi are free, satellite TV availability per room, kitchen format and hours, and gazebo/sauna capacity. It also states there is no confirmed review rating or count yet.
+
+## Forms
+Forms post to HotelOS (hotel `kp-dlyavsih`): `stay-request` (after the rooms, with the three room categories) and `sauna-request` (after the gazebo/sauna section). Phone is the only required field. Car wash, carpet cleaning, kitchen and gazebo stay phone-only.
